@@ -13,4 +13,4 @@ ADD dockerup.conf /etc/dockerup/
 
 VOLUME ["/var/run/docker.sock"]
 
-ENTRYPOINT ["/usr/local/bin/dockerup"]
+ENTRYPOINT ["/usr/local/bin/dockerup","--server"]
