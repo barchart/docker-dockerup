@@ -7,10 +7,12 @@
 FROM barchart/base
 MAINTAINER Jeremy Jongsma "jeremy@barchart.com"
 
+ENV HOME /etc/dockerup
+
 RUN pip install dockerup
 
 ADD dockerup.conf /etc/dockerup/
 
-VOLUME ["/var/run/docker.sock"]
+VOLUME ["/etc/dockerup/.dockercfg", "/var/run/docker.sock", "/var/cache/dockerup"]
 
 ENTRYPOINT ["/usr/local/bin/dockerup","--server"]

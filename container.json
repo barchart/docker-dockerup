@@ -1,10 +1,22 @@
 {
-  "type": "docker",
-  "image": "barchart/dockerup:latest",
-  "volumes": [
-    {
-      "containerPath": "/var/run/docker.sock",
-      "hostPath": "/var/run/docker.sock"
-    }
-  ]
+	"type": "docker",
+	"image": "barchart/dockerup:latest",
+	"volumes": [
+		{
+			"containerPath": "/var/cache/dockerup",
+			"hostPath": "/var/cache/dockerup"
+		},
+		{
+			"containerPath": "/var/run/docker.sock",
+			"hostPath": "/var/run/docker.sock"
+		},
+		{
+			"containerPath": "/etc/dockerup/.dockercfg",
+			"hostPath": "/root/.dockercfg"
+		},
+		{
+			"containerPath": "/etc/dockerup/containers.d",
+			"hostPath": "/etc/dockerup/containers.d"
+		}
+	]
 }
