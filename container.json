@@ -3,6 +3,10 @@
 	"image": "barchart/dockerup:latest",
 	"volumes": [
 		{
+			"containerPath": "/var/log/ext",
+			"hostPath": "/var/log/ext"
+		},
+		{
 			"containerPath": "/var/cache/dockerup",
 			"hostPath": "/var/cache/dockerup"
 		},
