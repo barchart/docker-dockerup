@@ -13,6 +13,6 @@ RUN pip install dockerup
 
 ADD dockerup.conf /etc/dockerup/
 
-VOLUME ["/etc/dockerup/.dockercfg", "/var/run/docker.sock", "/var/cache/dockerup", "/var/log/ext", "/etc/dockerup/containers.d"]
+VOLUME ["/etc/dockerup/.dockercfg", "/var/run/docker.sock", "/var/cache/dockerup", "/etc/dockerup/containers.d"]
 
 ENTRYPOINT ["/usr/local/bin/dockerup","--server"]
