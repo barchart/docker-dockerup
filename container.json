@@ -1,6 +1,9 @@
 {
 	"type": "docker",
 	"image": "barchart/dockerup:latest",
+	"update": {
+		"eager": true
+	},
 	"volumes": [
 		{
 			"containerPath": "/var/log/ext",
