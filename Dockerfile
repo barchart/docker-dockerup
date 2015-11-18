@@ -15,4 +15,4 @@ ADD dockerup.conf /etc/dockerup/
 
 VOLUME ["/etc/dockerup/.dockercfg", "/var/run/docker.sock", "/var/cache/dockerup", "/etc/dockerup/containers.d"]
 
-ENTRYPOINT ["/usr/local/bin/dockerup","--server --v"]
+ENTRYPOINT ["/usr/local/bin/dockerup","--server -v"]
